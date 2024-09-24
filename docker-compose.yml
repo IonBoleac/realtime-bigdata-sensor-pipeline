@@ -129,13 +129,13 @@ services:
         protocol: tcp
         mode: host
 
-  # sensors:
-  #   container_name: bd-sensors
-  #   networks:
-  #     - elk
-  #   build:
-  #     context: sensors/
-  #   restart: unless-stopped
+  sensors:
+    container_name: bd-sensors
+    networks:
+     - elk
+    build:
+      context: sensors/
+    restart: unless-stopped
     
   #jupyterlab:
   #  container_name: bd-jupyter
