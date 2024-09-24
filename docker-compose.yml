@@ -129,29 +129,29 @@ services:
         protocol: tcp
         mode: host
 
-  sensors:
-    container_name: bd-sensors
-    networks:
-      - elk
-    build:
-      context: sensors/
-    restart: unless-stopped
+  # sensors:
+  #   container_name: bd-sensors
+  #   networks:
+  #     - elk
+  #   build:
+  #     context: sensors/
+  #   restart: unless-stopped
     
-  jupyterlab:
-    container_name: bd-jupyter
-    image: jupyter/datascience-notebook
-    ports:
-      - "8888:8888"
-    volumes:
-      - ./notebooks:/home/jovyan/work
-    networks:
-      - elk
-    environment:
-      - JUPYTER_ENABLE_LAB=yes
-      - CHOWN_HOME=yes
-      - NB_UID=1000
-      - NB_GID=100
-    restart: unless-stopped
+  #jupyterlab:
+  #  container_name: bd-jupyter
+  #  image: jupyter/datascience-notebook
+  #  ports:
+  #    - "8888:8888"
+  #  volumes:
+  #    - ./notebooks:/home/jovyan/work
+  #  networks:
+  #    - elk
+  #  environment:
+  #    - JUPYTER_ENABLE_LAB=yes
+  #    - CHOWN_HOME=yes
+  #    - NB_UID=1000
+  #    - NB_GID=100
+  #  restart: unless-stopped
 
 
 networks:
