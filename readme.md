@@ -5,6 +5,11 @@ Its implementation starts with an Elastic stack in docker compose, provided by t
 
 ![Alt text](img/pipeline.png "Pipeline")
 
+## Start Pipeline
+- Start the pipeline with docker-compose:
+    ```bash
+    docker-compose up
+    ```
 
 ## Data Sources
 - Check the logs of python docker container:
