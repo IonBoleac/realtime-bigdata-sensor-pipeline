@@ -32,6 +32,9 @@ Its implementation starts with an Elastic stack in docker compose, provided by t
     docker logs --follow bd-logstash
     ```
 
+## Data Filtering
+- There are two type of filters in the pipeline, one for the temperature data and another for the humidity data. The filters are located in "[path-to-logstash-conf](./logstash/pipeline/logstash.conf)". The data are collected from the MQTT topic "sensors/temperature" and "sensors/humidity". If it needs to be changed or add another topic, it can be done in the logstash configuration file.
+
 ## Visualization
 ### Discover
 - Go to "Discover" on the left panel and select data to display, such as "temperature" and "sensor_id"
